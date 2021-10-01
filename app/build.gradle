@@ -49,15 +49,40 @@ android {
 
 dependencies {
 
+    // Fundamental building blocks of Compose's programming model and state management, and core runtime for the Compose Compiler Plugin to target.
+    implementation "androidx.compose.runtime:runtime:$compose_version"
+    implementation "androidx.compose.runtime:runtime-livedata:$compose_version"
+
+    // Fundamental components of compose UI needed to interact with the device, including layout, drawing, and input.
+    implementation "androidx.compose.ui:ui:$compose_version"
+
+    // Build Jetpack Compose UIs with ready to use Material Design Components. This is the higher level entry point of Compose, designed to provide components that match those described at www.material.io.
+    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.material:material-icons-extended:$compose_version"
+
+    // Write Jetpack Compose applications with ready to use building blocks and extend foundation to build your own design system pieces.
+    implementation "androidx.compose.foundation:foundation:$compose_version"
+    implementation "androidx.compose.foundation:foundation-layout:$compose_version"
+
+    // Build animations in their Jetpack Compose applications to enrich the user experience.
+    implementation "androidx.compose.animation:animation:$compose_version"
+
+    // Allows to render composables with Preview
+    implementation "androidx.compose.ui:ui-tooling:$compose_version"
+
+    // In charge of setContent
+    implementation "androidx.activity:activity-compose:1.4.0-beta01"
+
+    // Accompanist
+    implementation "dev.chrisbanes.accompanist:accompanist-coil:$accompanist"
+
+
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
-    implementation 'androidx.activity:activity-compose:1.3.0-alpha06'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
